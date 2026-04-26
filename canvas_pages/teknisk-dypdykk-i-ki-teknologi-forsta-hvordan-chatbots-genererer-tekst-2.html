@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Teknisk dypdykk i KI-teknologi: Forstå hvordan chatbots genererer tekst</title>
+</head>
+<body>
+    <h1>Teknisk dypdykk i KI-teknologi: Forstå hvordan chatbots genererer tekst</h1>
+    <div style="max-width: 780px; width: 100%; margin-left: 0px;">
+<h2>Tekstbearbeiding gjennom mindre bestanddeler ≈ tokenization</h2>
+<p>For å forstå hvordan en chatbot som ChatGPT genererer tekst, må vi først se på hvordan språk bearbeides gjennom en prosess kalt tokenization. Tokenization bryter tekst ned i mindre enheter som kalles tokens. Disse tokens kan være hele ord, deler av ord, eller til og med enkelttegn, og de utgjør byggesteinene i hvordan språkmodeller opererer. Ved å jobbe med tokens, kan modeller analysere tekst mer effektivt og gjenkjenne konteksten i større datasett.</p>
+<div style="display: flex; gap: 4px; align-items: stretch; justify-content: center; width: 100%;">
+    <div style="display: flex; flex: 1; min-width: 220px; align-items: stretch; gap: 4px;">
+        <div style="flex-grow: 1; background: #f8f9fa; border: 1px solid #eef2ff; border-radius: 10px; padding: 25px 15px; text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+            <div style="position: absolute; top: 10px; right: 0; background: #3B5B8E; color: #fff; padding: 2px 8px; border-radius: 4px 0 0 4px; font-size: 0.7rem;">Steg 1</div>
+            <div style="width: 70px; height: 70px; background: #0B1D33; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; margin: 10px 0 15px 0; flex-shrink: 0;">Input</div>
+            <p style="margin: 0; font-size: 0.85rem; color: #111;">Tekst brytes i mindre enheter kalt <strong>"tokens"</strong> som får en tallverdi.</p>
+        </div>
+    </div>
+    <div style="display: flex; flex: 1; min-width: 220px; align-items: stretch; gap: 4px;">
+        <div style="flex-grow: 1; background: #f8f9fa; border: 1px solid #eef2ff; border-radius: 10px; padding: 25px 15px; text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+            <div style="position: absolute; top: 10px; right: 0; background: #3B5B8E; color: #fff; padding: 2px 8px; border-radius: 4px 0 0 4px; font-size: 0.7rem;">Steg 2</div>
+            <div style="width: 70px; height: 70px; background: #0B1D33; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; margin: 10px 0 15px 0; flex-shrink: 0;">Modell</div>
+            <p style="margin: 0; font-size: 0.85rem; color: #111;">Modellen bruker tallene og forstår mønstre og sammenhenger mellom tokens.</p>
+        </div>
+    </div>
+    <div style="display: flex; flex: 1; min-width: 220px; align-items: stretch; gap: 4px;">
+        <div style="flex-grow: 1; background: #f8f9fa; border: 1px solid #eef2ff; border-radius: 10px; padding: 25px 15px; text-align: center; position: relative; display: flex; flex-direction: column; align-items: center;">
+            <div style="position: absolute; top: 10px; right: 0; background: #3B5B8E; color: #fff; padding: 2px 8px; border-radius: 4px 0 0 4px; font-size: 0.7rem;">Steg 3</div>
+            <div style="width: 70px; height: 70px; background: #0B1D33; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; margin: 10px 0 15px 0; flex-shrink: 0;">Output</div>
+            <p style="margin: 0; font-size: 0.85rem; color: #111;">Språkmodellen forutsier hvilket ord som mest sannsynlig kommer etterpå.</p>
+        </div>
+    </div>
+</div>
+<hr>
+<p>Når en chatbot mottar input, som for eksempel et spørsmål eller en kommando, bruker den en rekke algoritmer for å predikere det mest sannsynlige neste token som bør følge basert på alt den har lært fra tidligere data. Dette handler om statistiske beregninger av sannsynligheter. Modellene er trent på et enormt datasett av tekst fra internett, bøker, artikler, og andre kilder, som gir den en bred forståelse av språkbruk, grammatikk, og kontekst.</p>
+<h3>Hvorfor gjør språkmodellene noen ganger feil?</h3>
+<p>Men hvorfor kan KI-modeller "hallusinere", eller generere feilaktig informasjon, hvis de er så avanserte? Det ligger i selve oppbygningen av hvordan disse modellene fungerer. De har ikke en forståelse av verden slik mennesker har. Istedenfor å ha innsikt i hva som er faktisk sant eller realistisk, genererer de tekst basert på hva som mest statistisk sannsynlig vil følge [1]. D<span style="font-family: inherit; font-size: 1rem;">ette kan føre til at de gir svar som virker overbevisende, men som er helt eller delvis feil, særlig i tilfeller der de trekker konklusjoner fra manglende eller misvisende data fra treningssettet. Derfor er det kritisk å bruke kritisk tenkning når du evaluerer KI-generert innhold og å kontrollere fakta og informasjon gitt av slike systemer.&nbsp;</span></p>
+<h3>Temperatur</h3>
+<p><span style="font-family: inherit; font-size: 1rem;">Moderne språkmodeller, slik som Copilot og ChatGPT er innstilt for å balansere pålitelighet og kreativitet, med responser som prøver å være nøyaktige i faktabaserte spørsmål og mer fleksible i kreative oppgaver. </span>Dette representeres i en modell ved en variabel som kalles <strong>temperatur</strong><span>, en parameter som styrer hvor deterministisk eller variert svaret blir. Lav temperatur gir mer konservative og presise svar; høy temperatur øker variasjon og kreativitet, men også sannsynligheten for at modellen finner på informasjon. Derfor er det avgjørende å bruke kritisk tenkning og faktasjekk på KI-generert innhold, samt instruere chatboten om å justere temperatur når nøyaktighet er viktig.</span></p>
+<div class="uio-icon-box task" title="inkludert innhold">
+    <h3>Eksperimentér med temperatur</h3>
+    <p>Gå til <strong><a href="https://gpt.uio.no" target="_blank">gpt.uio.no</a></strong> og still følgende to prompter (i hver sin nye chat):</p>
+    <p><strong>Prompt A:</strong> "Forklar fotosyntesen for en 10-åring. Vær ekstremt konservativ, saklig og kortfattet."</p>
+    <p><strong>Prompt B:</strong> "Forklar fotosyntesen for en 10-åring. Bruk et utpreget kreativt språk, lekne metaforer og vær nyskapende i formidlingen."</p>
+    <p><strong>Sammenlign:</strong> Hvilken av forklaringene oppleves som mest pålitelig? Hvilken er mest engasjerende? Legger du merke til om "kreativiteten" fører til unøyaktigheter?</p>
+</div>
+<div class="uio-color-box-3">
+    <h2><span>Tips:<img style="float: right;" role="presentation" src="https://uio.instructure.com/courses/60120/files/3530341/preview?verifier=CxVaBPhY2tKYNAIhSuDUxxB4x05bg5BHAvunvJZn" alt="" width="40" height="40" data-api-endpoint="https://uio.instructure.com/api/v1/courses/60120/files/3530341" data-api-returntype="File" loading="lazy"></span></h2>
+    <p><span>Hvis du trenger mer konservative eller mer kreative svar, be eksplisitt om det i instruksjonen ved å skrive for eksempel <strong>"vær konservativ og presis"</strong> eller <strong>"vær kreativ og utforskende"</strong>, så vil tonen og sannsynlighetsfordelingen (temperaturen) i svarene tilpasse seg ønsket stil. <strong>Husk likevel at det alltid er nødvendig med en kritisk vurdering!</strong></span></p>
+</div>
+<h3>KI-genererte treningsdata<strong></strong></h3>
+<p>Det finnes allerede store mengder KI-genert materiale på internett.&nbsp;<span style="font-family: inherit; font-size: 1rem;">Ettersom KI trenes på tekst som er tilgjengelig på internett skapes det et problem etterhvert som</span><span style="font-family: inherit;"><span style="font-size: 1rem;">&nbsp;mengden KI generert materiale på internett øker. Plutselig benyttes KI generert </span></span>materiale<span style="font-family: inherit;"><span style="font-size: 1rem;"> som kilder til informasjon i treningsmaterialet til KI-tjenester, noe som gjør at det blir stadig vanskeligere å identifisere hva som er sann eller usann informasjon. Se gjerne denne videoen, som har svært gode refleksjoner over hva dette kan føre til, og </span></span>verdien av menneskelig innholdsproduksjon.</p>
+<p><iframe title="YouTube video player" src="https://www.youtube.com/embed/_zfN9wnPvU0?si=bRVXlq2goX4udQ4S" width="560" height="315" loading="lazy" allowfullscreen="allowfullscreen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe></p>
+<hr>
+<div class="uio-color-box-3">
+    <h2>Enkelt oppsummert<img style="float: right;" role="presentation" src="https://uio.instructure.com/courses/60120/files/3530445/preview?verifier=86dKFBxNlcaKPDTJKsWPZrf3p6MIB0xE49gEvBif" alt="" width="40" height="40" data-api-endpoint="https://uio.instructure.com/api/v1/courses/60120/files/3530445" data-api-returntype="File" loading="lazy"></h2>
+    <p>Chatbots bruker avanserte algoritmer til å kalkulere det sannsynlige neste ord i en setning, basert på statistiske analyser av et stort korpus av tekstdata. Mangelen på ekte forståelse av verden kan noen ganger føre til at de skaper noe som virker autentisk, men som egentlig bare er en statistisk sannsynlighet, og derfor kan være helt uriktig — derav fenomenet <strong>hallusinasjon</strong>.</p>
+    <p><strong>På neste side lærer du om GPT og hvordan språkmodellene trenes og blir stadig bedre.&nbsp;</strong></p>
+</div>
+<div class="uio-icon-box source">
+    <h2>Litteratur</h2>
+    <ol>
+        <li>Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., Ishii, E., Bang, Y., Madotto, A., &amp; Fung, P. (2023). Survey of hallucination in natural language generation. <em>ACM Computing Surveys</em>, 55(12), 1-38.</li>
+    </ol>
+</div>
+</div><script src="https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_108310000000000001/attachments/2887335/global_js_loader.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GPT - Generative Pre-trained Transformer</title>
+</head>
+<body>
+    <h1>GPT - Generative Pre-trained Transformer</h1>
+    <h2><span>GPT: Generative Pre-trained Transformer</span></h2>
+<p><span>GPT, som står for Generative Pre-trained Transformer, er en type kunstig intelligens-modell utviklet av OpenAI. Denne modellen har fått betydelig oppmerksomhet for sin evne til å generere menneskelig språk på en sofistikert måte. Den underliggende teknologien i GPT kombinerer maskinlæringsteknikker med avanserte språkmodeller for å skape tekst som etterligner menneskelige uttrykk.</span></p>
+<p><span><img src="https://uio.instructure.com/courses/60120/files/3511558/preview?verifier=gIzo5b8SVk8R7zCXMPFH5teBUFF1aXwgGSaNUmhl" alt="OpenAI Tokenizer viser hvordan tekst deles opp i tokens – små sekvenser som ki bruker for å forstå og generere språk." width="100%" height="100%" data-api-endpoint="https://uio.instructure.com/api/v1/courses/60120/files/3511558" data-api-returntype="File" loading="lazy"></span></p>
+<p><sup><span>Skjermdump fra OpenAI Tokenizer viser hvordan tekst deles opp i tokens – små sekvenser som språkmodellen bruker for å forstå og generere språk.</span></sup></p>
+<hr>
+<h2><span>Hvordan er GPT-modeller trent?</span></h2>
+<p><span>&nbsp;</span><span>Prosessen for å trene GPT-modeller involverer to hovedsteg: pre-training og fine-tuning.</span><span>&nbsp;</span></p>
+<ol>
+<li><strong> Pre-training:</strong></li>
+</ol>
+<ul>
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">
+<li><span>Under pre-training blir modellen eksponert for store mengder tekstdata hentet fra diverse kilder på internett. Dette treningssettet er ikke merket med spesifikke oppgaver, men gir modellene en generell forståelse av språk, kontekst, struktur og semantikk.</span></li>
+<li><span>Målet er å lære modellen å forutsi det neste ordet i en tekstsekvens, basert på de foregående ordene. Modellens evne til å oppfatte statistiske mønstre i språket blir utviklet gjennom enorme datasett og komplekse beregninger.</span></li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li><strong> Fine-tuning:</strong></li>
+</ol>
+<ul>
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">
+<li><span>Etter <em>pre-training</em> finjusteres modellen med spesifikke oppgaver og mindre, mer spesialiserte datasett. Dette tilpasser modellen for bestemte brukstilfeller og forbedrer dens nøyaktighet i å utføre spesifikke oppgaver.</span></li>
+<li><span>Fine-tuning gjør modellen mer brukervennlig og presis når den svarer på mer spesifikke forespørsler, som spørsmålsbesvarelse, oversettelse eller oppsummering.</span></li>
+</ul>
+</li>
+</ul>
+<h2><span>Hvordan fungerer GPT-modeller?</span></h2>
+<p>GPT-modeller fungerer ved å bruke transformer-arkitekturen, som ble introdusert i det banebrytende studiet <em>Attention is All You Need</em> [1], og som er designet for å effektivt gjenkjenne sammenhenger i tekst gjennom mekanismer kalt "self-attention." Her er hvordan de fungerer steg for steg:<span>&nbsp;</span></p>
+<ol>
+<li><strong> Input-behandling:</strong></li>
+</ol>
+<ul>
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">
+<li><span>Når du skriver inn en tekst, blir den først bearbeidet gjennom tokenization, hvor teksten brytes ned i mindre enheter (tokens). Disse tokens er tallverdier som representerer ord eller deler av ord.</span></li>
+</ul>
+</li>
+</ul>
+<div class="uio-icon-box task">
+<h3>Se hvordan tekst blir til tokens</h3>
+<p>Åpne <strong><a href="https://platform.openai.com/tokenizer" target="_blank">OpenAI Tokenizer</a></strong> (ekstern lenke).</p>
+<p>Lim inn en setning fra denne siden og se hvordan den fargekoder de ulike delene av ordene.</p>
+<ul>
+<li><strong>Prøv dette:</strong> Skriv inn et vanlig ord på norsk, og deretter et veldig uvanlig eller oppdikket ord. Blir de delt opp forskjellig?</li>
+<li><strong>Refleksjon:</strong> Hvorfor tror du språkmodellen har lettere for å forstå ord den kan dele opp i kjente og meningsfulle tokens?</li>
+</ul>
+</div>
+<ol start="2">
+<li><strong> Modellanalyse:</strong></li>
+</ol>
+<ul>
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">
+<li><span>Transformers behandler tokens ved å beregne en vekting mellom dem for å forstå kontekster og relasjoner. Modellen utfører<strong> "self-attention,"</strong> som hjelper med å vektlegge hvordan forskjellige deler av teksten henger sammen.</span><span style="font-family: inherit; font-size: 1rem;">&nbsp;</span></li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><strong> Generering av tekst:</strong></li>
+</ol>
+<ul>
+<li style="list-style-type: none;">
+<ul style="list-style-type: square;">
+<li><span>&nbsp;&nbsp; Basert på forståelsen fra self-attention, forutsier modellen neste tokens og genererer tekst som svar på din input.</span></li>
+<li><span>&nbsp;&nbsp; Denne prosessen er drevet av modellens evne til å identifisere statistisk sannsynlige utfall basert på treningsdataene fra tidligere.</span></li>
+</ul>
+</li>
+</ul>
+<p><span>GPT's styrke ligger i dens evne til å generere sammenhengende, kontekstrikt og både målrettet og bred tekst. Selv om modellene har begrensninger, som å kunne hallusinere informasjon eller generere upresise svar, utgjør de et betydelig fremskritt innen naturlig språkbehandling og har mange potensielle bruksområder innen ulike sektorer.</span></p>
+<div class="uio-icon-box source" title="inkludert innhold">
+<h2>Litteratur</h2>
+<ol>
+<li>Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, Ł., &amp; Polosukhin, I. (2017). Attention is all you need. <em>Advances in neural information processing systems</em>, 30.</li>
+</ol>
+</div><script src="https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_108310000000000001/attachments/2887335/global_js_loader.js"></script>
+</body>
+</html>

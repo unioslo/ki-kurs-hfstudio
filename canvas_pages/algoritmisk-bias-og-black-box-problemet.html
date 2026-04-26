@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Algoritmisk bias og Black Box-problemet</title>
+</head>
+<body>
+    <h1>Algoritmisk bias og Black Box-problemet</h1>
+    <div style="max-width: 780px; width: 100%; margin-left: 0px;">
+<h2><span style="font-size: 18pt;">Algoritmisk bias og "The Black Box"</span></h2>
+<p>Kunstig intelligens fremstilles ofte som objektiv og nøytral, men i virkeligheten arver disse systemene ofte de samme fordommene og skjevhetene som finnes i samfunnet. I denne leksjonen skal vi se på to av de største teknisk-etiske utfordringene med KI: algoritmisk bias og mangelen på transparens, ofte kalt "black box"-problemet.</p>
+<hr>
+<h3>Hva er algoritmisk bias?</h3>
+<p><strong>Algoritmisk bias</strong> oppstår når KI produserer skjeve eller diskriminerende resultater. Dette skjer i hovedsak fordi KI-modellene trenes på historiske data. Hvis disse dataene inneholder skjevheter, vil KI-systemet lære og reprodusere dem. For eksempel har ansiktsgjenkjenningsalgoritmer ofte vist seg å prestere dårligere på mørkhudede ansikter fordi treningsdataene i hovedsak besto av lyse ansikter.</p>
+<p>Dette er kritisk fordi KI stadig oftere brukes i viktige beslutningsprosesser, som ansettelser, tildeling av boliglån, og til og med risikovurderinger i rettsvesenet. Hvis KI alene tar slike avgjørelser, risikerer vi å systematisere diskriminering, spesielt fordi KI mangler menneskelig skjønn og empati.</p>
+<h3>"The Black Box"</h3>
+<p>Et beslektet problem er det vi kaller for en <strong>"black box"</strong> (svart boks). Dette begrepet beskriver det faktum at vi ofte ikke vet nøyaktig <em>hvordan</em> en avansert KI-algoritme har kommet frem til beslutningen sin. Selv menneskene som har programmert modellen kan ikke alltid forklare hvorfor den genererte et spesifikt output [1].</p>
+<h3>Hvorfor er transparens viktig?</h3>
+<p data-path-to-node="1">Nettopp på grunn av bias og "black box"-problemet er åpenhet (transparens) utrolig viktig. <strong data-path-to-node="1" data-index-in-node="95">Vi kan ikke tillate at vi</strong> stoler blindt på KI-systemer, spesielt i situasjoner som påvirker menneskers liv og rettigheter. Uten transparens blir det umulig å stille noen til ansvar når KI-en gjør feil eller diskriminerer. Hvis et KI-system avslår en lånesøknad, avviser en jobbsøker eller stiller en feil medisinsk diagnose, har de berørte partene rett til å vite <i data-path-to-node="1" data-index-in-node="451">hvorfor</i>.</p>
+<h3 data-path-to-node="2">Kan disse utfordringene løses?</h3>
+<p data-path-to-node="3"><span style="background-color: #fbeeb8;">Undervisningsvideo med Joey om ThrustAI?</span></p>
+<p data-path-to-node="3">For å motvirke algoritmisk bias og "åpne den svarte boksen", jobber teknologer, jurister og etikere i dag med flere konkrete tiltak:</p>
+<ul data-path-to-node="4">
+<li>
+<p data-path-to-node="4,0,0"><strong data-path-to-node="4,0,0" data-index-in-node="0">Forklarbar KI (Explainable AI / XAI):</strong> Dette er et voksende forskningsfelt som fokuserer på å utvikle KI-modeller som ikke bare gir et resultat, men som også kan forklare logikken bak beslutningen på en måte vi mennesker forstår.</p>
+</li>
+<li>
+<p data-path-to-node="4,1,0"><strong data-path-to-node="4,1,0" data-index-in-node="0">Mer representative treningsdata:</strong> Utviklere må være langt mer kritiske til hvilke data de fôrer systemene sine med. Ved å bevisst kuratere og inkludere mangfoldige og balanserte datasett, kan vi redusere risikoen for at KI-en reproduserer historiske fordommer.</p>
+</li>
+<li>
+<p data-path-to-node="4,2,0"><strong data-path-to-node="4,2,0" data-index-in-node="0">Mennesket i sløyfen (Human-in-the-loop):</strong> I kritiske sektorer som helsevesen, politi og finans, bør KI først og fremst brukes som et verktøy for å støtte beslutninger. Et kompetent menneske bør alltid vurdere KI-ens anbefalinger og ha det siste ordet.</p>
+</li>
+<li>
+<p data-path-to-node="4,3,0"><strong data-path-to-node="4,3,0" data-index-in-node="0">Regulering og revisjon:</strong> Nytt lovverk, som for eksempel EUs "AI Act", stiller nå strenge krav til dokumentasjon, åpenhet og risikovurdering av KI-systemer. Det blir også stadig viktigere med uavhengige revisorer som kan teste og "stressteste" algoritmer for å avdekke skjulte skjevheter før de slippes på markedet.</p>
+</li>
+</ul>
+<div class="uio-icon-box task">
+<h3>Utforsk visuell bias</h3>
+<p>Bruk <strong><a href="https://copilot.microsoft.com" target="_blank">Microsoft Copilot</a></strong> (logg inn med UiO-bruker) og be den lage et bilde med følgende prompt:</p>
+<blockquote style="background: #f9f9f9; border-left: 5px solid #ccc; padding: 10px; margin: 10px 0;">"Lag et bilde av en professor som foreleser om kunstig intelligens."</blockquote>
+<p><strong>Analyser:</strong> Se nøye på bildet som blir generert. Hvilket kjønn har professoren? Hvilken etnisitet? Hvilken alder? Gjenspeiler bildet mangfoldet i samfunnet, eller har KI-en lært seg et bestemt (og kanskje utdatert) mønster fra sine treningsdata?</p>
+</div>
+<div class="uio-icon-box task">
+<h3>Vil du dykke dypere ned i XAI?</h3>
+<p>For å virkelig forstå hvordan forskere jobber med å "åpne" den svarte boksen og gjøre maskinlæring mer forståelig, anbefaler vi på det sterkeste å leke litt med <strong>Google PAIR Explorables</strong>. Dette er en serie fantastiske, interaktive og visuelle essays som gjør kompliserte XAI-konsepter – som algoritmisk rettferdighet og skjulte mønstre i data – lette å forstå og bygget for at lekfolk skal kunne utforske dem selv.</p>
+<p>&nbsp;<a href="https://pair.withgoogle.com/explorables/" target="_blank">Utforsk Google PAIR Explorables her</a></p>
+</div>
+<div class="uio-icon-box source">
+<h3>Anbefalt litteratur:</h3>
+<ol>
+<li><span>Hassija, V., Chamola, V., Mahapatra, A. </span><i>et al.</i><span> Interpreting Black-Box Models: A Review on Explainable Artificial Intelligence. </span><i>Cogn Comput</i> <strong>16</strong><span>, 45–74 (2024). https://doi.org/10.1007/s12559-023-10179-8</span></li>
+</ol>
+</div>
+</div><script src="https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_108310000000000001/attachments/2887335/global_js_loader.js"></script>
+</body>
+</html>

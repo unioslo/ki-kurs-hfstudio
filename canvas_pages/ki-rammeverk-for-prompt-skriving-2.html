@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>KI-rammeverk for prompt-skriving</title>
+</head>
+<body>
+    <h1>KI-rammeverk for prompt-skriving</h1>
+    <div style="max-width: 780px; width: 100%; margin-left: 0px;">
+<h2><span style="font-size: 18pt;">Hvordan stille gode spørsmål til KI?</span></h2>
+<p>Å bruke generativ kunstig intelligens krever at vi kommuniserer med maskinen på en måte den forstår. Denne prosessen kalles å "prompte". Et <strong>prompt</strong> (eller ledetekst) er instruksjonen eller spørsmålet du gir KI-modellen for at den skal utføre en oppgave for deg.</p>
+<hr>
+<h3>"Søppel inn, søppel ut"</h3>
+<p>Når vi bruker KI gjelder prinsippet <strong>"Garbage in, garbage out" (søppel inn, søppel ut)</strong>. Siden store språkmodeller egentlig bare er statistiske gjetninger på hva det neste ordet skal være, vil vage eller dårlige instruksjoner gi deg vage og generiske svar tilbake. Kvaliteten på svaret du får modellerer direkte kvaliteten på instruksjonene du gir.</p>
+<h3>Et praktisk rammeverk for gode prompts</h3>
+<p>For å få gode resultater, bør et godt prompt inneholde flere byggeklosser:</p>
+<ul>
+<li><strong>Rolle (Persona):</strong> Hvem skal KI-en være? ("Opptre som en streng og strukturert veileder i medisin"). Å gi KI-en en tydelig rolle hjelper modellen med å ramme inn sitt eget fagspråk, abstraksjonsnivå og tonefall, noe som gir mye bedre og mer tilpassede svar enn et standard "Wikipedia"-slett-svar.</li>
+<li><strong>Oppgave:</strong> Hva er det helt konkret du vil at den skal gjøre? ("Sammenlign disse to teoriene" eller "Forklar begrepet X").</li>
+<li><strong>Kontekst:</strong> Hvorfor spør du, og hva er rammen? ("Jeg er en førsteårsstudent på sosiologi som som trenger en strukturert studieplan for mitt emne").</li>
+<li><strong>Format:</strong> Hvordan vil du ha svaret? ("Gi meg en liste med tre kulepunkter", "Maks 200 ord" eller "Sett det opp i en tabell").</li>
+</ul>
+<h3>Iterativ prompting (Flere-stegs sparking)</h3>
+<p>Veldig ofte treffer ikke KI-en blink på første forsøk. Da må vi ty til <strong>iterativ prompting</strong>. Dette er en strategi hvor kommunikasjonen foregår over flere steg [1]:</p>
+<ol>
+<li>Du stiller et startspørsmål.</li>
+<li>Du leser og evaluerer svaret du får (Er det for lett? Misforsto den konteksten?).</li>
+<li>Du gir KI-en en justerende instruksjon basert på feilene i det første svaret ("Dette var bra, men kan du gjøre språket hakket mer akademisk, og fokusere mer på del 2 i teksten?").</li>
+</ol>
+<p>Slik bygger du opp tekst og forståelse dynamisk, fremfor å stole blindt på det aller første utkastet maskinen trykket ut.</p>
+<div class="uio-icon-box task">
+<h3>Fra "søppel" til gull-prompt</h3>
+<p>Ta utgangspunkt i dette dårlige promptet: <em>"Skriv om sosiologi (bytt gjerne ut med ditt eget fagfelt)."</em></p>
+<p><strong>Oppgave:</strong> Bruk rammeverket over (Rolle, Oppgave, Kontekst, Format) til å skrive om promptet slik at det blir nyttig for din studiehverdag.</p>
+<p><strong>Eksempel på forbedring:</strong> "Du er en pedagogisk veileder (Rolle). Lag en oversikt over de tre viktigste forskjellene mellom kvalitativ og kvantitativ metode (Oppgave) for en student som skal begynne på sosiologi (Kontekst). Bruk en sammenlignende tabell (Format)."</p>
+<p><strong>Prøv selv:</strong> Skriv ditt eget forbedrede prompt i <strong><a href="https://gpt.uio.no" target="_blank">gpt.uio.no</a></strong> og se forskjellen i resultatet!</p>
+</div>
+<div class="uio-icon-box source">
+<h2>Litteratur</h2>
+<ol>
+<li>White, J., Fu, Q., Hays, S., Sandborn, M., Olea, C., Gilbert, H., Elnashar, A., Spencer-Smith, J., &amp; Schmidt, D. C. (2023). A prompt pattern catalog to enhance prompt engineering with ChatGPT. <em>arXiv preprint arXiv:2302.11382</em>.</li>
+</ol>
+</div>
+</div><script src="https://instructure-uploads-eu.s3.eu-west-1.amazonaws.com/account_108310000000000001/attachments/2887335/global_js_loader.js"></script>
+</body>
+</html>
