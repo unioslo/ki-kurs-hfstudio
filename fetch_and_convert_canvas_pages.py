@@ -20,10 +20,8 @@ To get your Canvas API token:
 
 import os
 import sys
-import re
 import argparse
 import requests
-import json
 from pathlib import Path
 from bs4 import BeautifulSoup, NavigableString
 
