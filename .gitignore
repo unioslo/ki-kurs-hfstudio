@@ -1,2 +1,17 @@
 _build
 claude-exports
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Canvas pages (temporary downloads)
+canvas_pages/
