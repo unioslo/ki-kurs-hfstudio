@@ -1,8 +1,6 @@
 Redelig bruk av kunstig intelligens i høyere utdanning
 =====================================================
 
-Velkommen til kurset om redelig bruk av kunstig intelligens i høyere utdanning.
-
 .. toctree::
    :maxdepth: 2
    :caption: Innhold:
