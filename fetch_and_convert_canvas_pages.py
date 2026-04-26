@@ -31,7 +31,7 @@ CANVAS_URL = "https://uio.instructure.com"
 COURSE_ID = "60120"
 
 # Output directories
-CANVAS_PAGES_DIR = Path("canvas_pages")
+CANVAS_ORIG_HTML_PAGES_DIR = Path("canvas_orig_html_pages")
 RST_OUTPUT_DIR = Path("source/pages")
 
 
@@ -581,7 +581,7 @@ def main():
     args = parser.parse_args()
 
     # Create output directories
-    CANVAS_PAGES_DIR.mkdir(exist_ok=True)
+    CANVAS_ORIG_HTML_PAGES_DIR.mkdir(exist_ok=True)
     RST_OUTPUT_DIR.mkdir(exist_ok=True)
 
     if not args.skip_fetch:
@@ -594,7 +594,7 @@ def main():
             # Fetch single page
             page_data = get_page_content(token, args.page_id)
             if page_data:
-                save_html_page(page_data, CANVAS_PAGES_DIR)
+                save_html_page(page_data, CANVAS_ORIG_HTML_PAGES_DIR)
                 print(f"\nFetched 1 page")
         else:
             # Fetch all pages
@@ -611,17 +611,17 @@ def main():
                 if page_url:
                     page_data = get_page_content(token, page_url)
                     if page_data:
-                        save_html_page(page_data, CANVAS_PAGES_DIR)
+                        save_html_page(page_data, CANVAS_ORIG_HTML_PAGES_DIR)
 
-            print(f"\nFetched {len(pages)} pages to {CANVAS_PAGES_DIR}/")
+            print(f"\nFetched {len(pages)} pages to {CANVAS_ORIG_HTML_PAGES_DIR}/")
 
     # Convert HTML files to RST
     print(f"\nConverting HTML files to RST...\n")
 
-    html_files = sorted(CANVAS_PAGES_DIR.glob("*.html"))
+    html_files = sorted(CANVAS_ORIG_HTML_PAGES_DIR.glob("*.html"))
 
     if not html_files:
-        print(f"No HTML files found in {CANVAS_PAGES_DIR}/")
+        print(f"No HTML files found in {CANVAS_ORIG_HTML_PAGES_DIR}/")
         sys.exit(1)
 
     for html_file in html_files:
